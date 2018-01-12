@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import DataGrid from './DataGrid'
+import DataGrid from '@/components/DataGrid'
 
 export default {
   components: {

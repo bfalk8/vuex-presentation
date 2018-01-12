@@ -24,6 +24,7 @@
 
 <script>
 import CurrentQueue from './CurrentQueue'
+import api from '../api/requests'
 
 export default {
   name: 'HelloWorld',
@@ -34,6 +35,11 @@ export default {
   },
   components: {
     CurrentQueue
+  },
+  mounted () {
+    api.getQueueEntries(data => {
+      this.$store.commit('updateMainQueue', data)
+    }, '5dafa77d-6956-47d4-8d09-124d3afcb1b0')
   }
 }
 </script>

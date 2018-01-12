@@ -9,13 +9,13 @@ Vue.use(Vuex)
 const state = {
   currentQueue: {
     queueID: 0,
-    columnNames: ['Name', 'Job', 'Title'],
-    rows: [{ cells: [ 'joe', 'carpenter', 'boss' ] },
-      { cells: [ 'brian', 'tennis player', 'trainer' ] },
-      { cells: [ 'zedd', 'musician', 'self-employed' ] }],
+    columnNames: ['Loan Number', 'Loan Type', 'Name on Application'],
+    rows: [{ cells: [ '0', 'Mortgage', 'Bob the Builder' ] },
+      { cells: [ '3', 'Personal', 'Tracer' ] },
+      { cells: [ '9', 'Vehicle', 'Reinhardt' ] }],
     filterKey: 0
   },
-  queueList: [{id: 0, name: 'Base Queue', count: 3}, {id: 1, name: 'Other Queue', count: 2}]
+  queueList: [{id: '1', name: 'Base Queue', count: 3}, {id: '2', name: 'Other Queue', count: 2}]
 }
 
 export default new Vuex.Store({
