@@ -38,7 +38,6 @@ h2 {
   height: 100%;
 }
 .queueList {
-  height: 100%;
   border: 2px solid rgb(88, 88, 88);
   padding: 20px; 
   margin: 10px;

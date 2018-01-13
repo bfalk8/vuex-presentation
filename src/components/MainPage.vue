@@ -2,7 +2,7 @@
   <div class="wrapper">
     <current-queue class="one" /> 
     <queue-list class="two"
-      v-bind:queues="this.$store.state.queueList" v-on:selectQueue="selectQueue"
+      v-bind:queues="this.$store.getters.queueList" v-on:selectQueue="selectQueue"
      />
   </div>
 </template>
@@ -23,7 +23,7 @@ export default {
   mounted () {
     api.getQueueEntries(data => {
       this.$store.commit('updateMainQueue', data)
-    }, this.$store.state.currentQueue.queueID)
+    }, this.$store.getters.currentQueueID)
     api.getQueues(data => {
       this.$store.commit('updateQueueList', data)
     })
